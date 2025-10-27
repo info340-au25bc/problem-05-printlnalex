@@ -1,5 +1,4 @@
 'use strict';
-
 /** Basic Types */
 
 //Define a new variable `motto` for the value "The iSchool is my school"
@@ -8,17 +7,18 @@ let motto = "The iSchool is my school";
 //Log out the motto
 console.log(motto);
 
+
 //Define a variable `mottoLength` that stores the length of the motto.
 //Use the `.length` property
 let mottoLength = motto.length;
+
 //Log out the length.
 console.log(mottoLength);
 
+
 //Use the `indexOf()` String method to see if the word "cool" is in the string.
 //See http://www.w3schools.com/jsref/jsref_obj_string.asp for String methods
-
 let containsCool = motto.indexOf("cool") !== -1;
-
 
 //Log out a _boolean_ whether it is or not.
 console.log(containsCool);
@@ -39,42 +39,41 @@ let updatedMottoLength = motto.length;
 let ratio = ((updatedMottoLength / mottoLength) * 100).toFixed(2) + "%";
 console.log(ratio);
 
-/** Arrays **/
 
+/** Arrays **/
 //Create an array `numbers` that contains these 10 numbers:
 //    1 4 1 5 9 2 6 5 3 5
-
 let numbers = [1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+
 //Log out the array.
 console.log(numbers);
 
 
 //Use bracket notation to change the `4` in the array to a `4.2`.
-
 numbers[1] = 4.2;
+
 //Log out the updated array.
 console.log(numbers);
 
 //Add the number 3 to the END of the array.
 numbers.push(3);
+
 //Log out the updated array.
 console.log(numbers);
 
 //Find the median (middle) value of the numbers in the array.
 //Hint: sort() the array, then access the middle index of the sorted values.
+//You can use the `Math.floor()` function to round to a whole number.
 numbers.sort(function(a, b) { return a - b });
 let middleIndex = Math.floor(numbers.length / 2);
-//You can use the `Math.floor()` function to round to a whole number.
+
 //Log out the median value.
 console.log(numbers[middleIndex]);
-
-
 
 /** Objects **/
 
 //Create a variable `rect` that represents a rectangle. This should be an Object
 //with properties:
-
 //  `x` (coordinate) of 30, `y` of 50, `width` of 100, `height` of 50
 let rect = {
   x: 30,
@@ -82,9 +81,9 @@ let rect = {
   width: 100,
   height: 50
 };
+
 //Log out the rectangle object
 console.log(rect);
-
 
 //Log out the x- and y- coordinates of the rectangle (its location). Your output 
 //should have the format `"X, Y"`.
@@ -92,7 +91,6 @@ console.log(rect.x + ", " + rect.y);
 
 //Set the rectangle's height to be the square root of its width. (Use the 
 //`Math.sqrt()` function).
-
 //Use *dot notation* to access the properties!
 rect.height = Math.sqrt(rect.width);
 
@@ -135,11 +133,12 @@ console.log(shapes);
 //the current property value!). What do you get?
 console.log(shapes[2].hypotenuse);
 
-
 //Assign the triangle inside the `shapes` array a 'hypotenuse' property of `55`.
-//Log out the `shapes` array again.
 shapes[2].hypotenuse = 55;
+
+//Log out the `shapes` array again.
 console.log(shapes);
+
 //Visually check: what happens if you inspect the previously logged array in the 
 //Chrome developer console?
-
+// It seems to show the value that we just changed. 

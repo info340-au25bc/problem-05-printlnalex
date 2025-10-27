@@ -5,23 +5,20 @@
 function addFour(x) {
   return x + 4;
 }
-   
+
 /* Create and log a variable `twelve` that is the result of passing 8 to your
    addFour() function. */
-
 let twelve = addFour(8);
 console.log(twelve);
-
-   
+  
 /* Create and log a variable `twelveString` that is the result of passing "8" 
    (a string) to your addFour() function. Consider what this tells you about how
   the function should be explained (e.g., in a comment). */
-
 let twelveString = addFour("8");
 console.log(twelveString);
+// The function adds it to the string, and in result adds the 4 to the end since it cannot add it numerically, so 
+// it just turns it into a combined string of both numbers together. 
 
-
-  
 
 /* Define a function `compoundInterest()` that takes three parameters: 
      1. an initial bank balance (principle, in dollars)
@@ -30,11 +27,9 @@ console.log(twelveString);
    The function should calculate the continuous compound interest
      (https://en.wikipedia.org/wiki/Compound_interest#Continuous_compounding) 
    and *return* the resulting total balance after that many number of years
-
    You can call the method and log the result to check your work. Compare to
      http://www.mathwarehouse.com/calculators/continuous-compound-interest-calculator.php
 */
-
 function compoundInterest(principle, rate, years) {
   return principle * Math.exp(rate * years);
 }
@@ -62,7 +57,6 @@ function fizzBuzz(n) {
   return result;
 }
    
-
 /* Define a function `getLetterFrequencies()` that takes in a single string as 
    an argument. The function should *return* an Object whose keys are characters
    (letters) and whose values are the number of times that character appears in
@@ -72,7 +66,6 @@ function fizzBuzz(n) {
    each letter, increase the value associated with that key by one. Watch out 
    for if the letter is not in the Object yet!
    You can test this method with a word like "Mississippi". */
-
   function getLetterFrequencies(str) {
     let frequencies = {};
       for (let i = 0; i < str.length; i++) {
@@ -85,7 +78,6 @@ function fizzBuzz(n) {
     return frequencies; 
   }
 
-
 /* Create a variable `deck` that represents a deck of modern playing cards
    (https://en.wikipedia.org/wiki/Playing_card). This variable should be an
    *array* of 52 elements, each of which is an Object with properties:
@@ -95,14 +87,9 @@ function fizzBuzz(n) {
         11-14 represent a Jack, Queen, King, or Ace respectively).
     Tip: use a pair of nested loops to add each combination of suit and rank to 
     the `deck` array! 
-    
-    
-
-
     You can log out the `deck` to check your work! */
 let deck = [];
 let suits = ["hearts", "diamonds", "clubs", "spades"];
-
 for (let suit of suits) {
   for (let rank = 2; rank <= 14; rank++) {
     deck.push({suit: suit, rank: rank});
@@ -112,7 +99,6 @@ console.log(deck);
 
 //You can test the below functions by creating e.g., a `pokerHand` array that 
 //contains five cards from the `deck`.
-
 /* Define a function `containsQueenOfHearts()` that takes in an array of "card"
    objects (e.g., a Poker hand) and returns whether or not the Queen of Hearts
    is in that array.
@@ -126,12 +112,10 @@ let containsQueenOfHearts = function(hand) {
   return false;
 };
    
-
 /* Define a function `getHighCard()` that takes in an array of "card" objects
   and returns the card object with the highest value. The "high card" is the one
   with the highest rank. Cards of different suits but the same rank are 
   considered to have the same value, and either is a valid result */
-
 let getHighCard = function(hand) {
   let highCard = hand[0];
   for (let card of hand) {
@@ -142,10 +126,8 @@ let getHighCard = function(hand) {
   return highCard;
 };
   
-
 /* Define a function `isFlush()` that takes in an array of "card" objects and
    returns whether or not the cards all have the same _suit_. */
-
 let isFlush = function(hand) {
   let firstSuit = hand[0].suit;
   for (let card of hand) {
@@ -161,7 +143,6 @@ let isFlush = function(hand) {
    cards with the same _rank_) in the array.
    Double challenge: return the rank of the pair of cards with the highest rank 
    (e.g., if the hand contains more than one pair!) */
-
   let hasPair = function(hand) {
     let rankCounts = {};
     for (let card of hand) {
@@ -179,7 +160,6 @@ let isFlush = function(hand) {
     return false;
   };
   console.log(hasPair([{suit: "hearts", rank: 10}, {suit: "spades", rank: 10}, {suit: "clubs", rank: 5}]));
-
 
 //Make functions and variables available to tester. DO NOT MODIFY THIS.
 if(typeof module !== 'undefined' && module.exports){
